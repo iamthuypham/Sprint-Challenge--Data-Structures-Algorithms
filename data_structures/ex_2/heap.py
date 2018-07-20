@@ -6,7 +6,7 @@ def heapsort(arr):
     newHeap.insert(l)
   
   # delete the largest num in heap
-  while len(newHeap.storage) > 1:
+  while len(newHeap.storage) > 0:
     res = [newHeap.delete()] + res
     
   return res
