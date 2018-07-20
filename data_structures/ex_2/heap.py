@@ -1,5 +1,15 @@
 def heapsort(arr):
-  pass
+  res = []
+  newHeap = Heap()
+  # create and insert to new heap
+  for l in arr:
+    newHeap.insert(l)
+  
+  # delete the largest num in heap
+  while len(newHeap.storage) > 1:
+    res = [newHeap.delete()] + res
+    
+  return res
 
 class Heap:
   def __init__(self):
@@ -43,3 +53,5 @@ class Heap:
       return index * 2
     else:
       return index * 2 if self.storage[index * 2] > self.storage[index * 2 + 1] else index * 2 + 1
+    
+    
