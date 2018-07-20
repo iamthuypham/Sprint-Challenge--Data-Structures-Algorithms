@@ -14,7 +14,6 @@ class BinarySearchTreeTests(unittest.TestCase):
     self.bst.insert(7)
     self.bst.insert(9)
     self.bst.depth_first_for_each(cb)
-
     self.assertEqual(arr, [5, 2, 3, 7, 9])
 
   def test_breadth_first_for_each_executes_callback(self):
